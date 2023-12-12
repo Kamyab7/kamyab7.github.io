@@ -23,4 +23,6 @@ public sealed record AppConfiguration
     public List<Skill> Skills { get; init; }
 
     public List<Experience> Experiences { get; init; }
+
+    public List<Education> Educations { get; init; }
 }

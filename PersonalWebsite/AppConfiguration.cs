@@ -29,4 +29,6 @@ public sealed record AppConfiguration
     public List<string> Clients { get; init; }
 
     public List<Testimonial> Testimonials { get; init; }
+
+    public List<Service> Services { get; init; }
 }

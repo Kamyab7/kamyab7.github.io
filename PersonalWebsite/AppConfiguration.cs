@@ -25,4 +25,6 @@ public sealed record AppConfiguration
     public List<Experience> Experiences { get; init; }
 
     public List<Education> Educations { get; init; }
+
+    public List<string> Clients { get; init; }
 }

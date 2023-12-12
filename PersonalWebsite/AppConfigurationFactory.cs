@@ -13,6 +13,7 @@ public static class AppConfigurationFactory
         var skills = config.GetSection(nameof(AppConfiguration.Skills)).Get<List<Skill>>();
         var experiences = config.GetSection(nameof(AppConfiguration.Experiences)).Get<List<Experience>>();
         var educations = config.GetSection(nameof(AppConfiguration.Educations)).Get<List<Education>>();
+        var clients = config.GetSection(nameof(AppConfiguration.Clients)).Get<List<string>>();
 
         var configuration = new AppConfiguration
         {
@@ -26,7 +27,8 @@ public static class AppConfigurationFactory
             Social = social,
             Skills = skills,
             Experiences = experiences,
-            Educations = educations
+            Educations = educations,
+            Clients = clients
         };
 
         return configuration;

@@ -21,4 +21,6 @@ public sealed record AppConfiguration
     public Social Social { get; init; }
 
     public List<Skill> Skills { get; init; }
+
+    public List<Experience> Experiences { get; init; }
 }

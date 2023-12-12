@@ -89,24 +89,32 @@
         <div class="separator"></div>
 
         <ul class="social-list">
+            @if (Configuration.Social.HasLinkedinAccount)
+            {
+                <li class="social-item">
+                    <a href="@Configuration.Social.LinkedinAccountUrl" class="social-link">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </li>
+            }
 
-            <li class="social-item">
-                <a href="#" class="social-link">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-            </li>
+            @if (Configuration.Social.HasGithubAccount)
+            {
+                <li class="social-item">
+                    <a href="@Configuration.Social.GithubAccountUrl" class="social-link">
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                </li>
+            }
 
-            <li class="social-item">
-                <a href="#" class="social-link">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-            </li>
-
-            <li class="social-item">
-                <a href="#" class="social-link">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-            </li>
+            @if (Configuration.Social.HasTwitterAccount)
+            {
+                <li class="social-item">
+                    <a href="@Configuration.Social.TwitterAccountUrl" class="social-link">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </li>
+            }
 
         </ul>
 

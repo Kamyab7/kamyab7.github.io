@@ -1,4 +1,6 @@
-﻿namespace PersonalWebsite;
+﻿using PersonalWebsite.Models;
+
+namespace PersonalWebsite;
 
 public sealed record AppConfiguration
 {
@@ -15,4 +17,6 @@ public sealed record AppConfiguration
     public string Phone { get; init; }
 
     public List<string> AboutMe { get; init; }
+
+    public Social Social { get; init; }
 }

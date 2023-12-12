@@ -1,4 +1,6 @@
-﻿namespace PersonalWebsite;
+﻿using PersonalWebsite.Models;
+
+namespace PersonalWebsite;
 
 public static class AppConfigurationFactory
 {
@@ -7,6 +9,7 @@ public static class AppConfigurationFactory
         ArgumentNullException.ThrowIfNull(config);
 
         var aboutMe = config.GetSection(nameof(AppConfiguration.AboutMe)).Get<List<string>>();
+        var social = config.GetSection(nameof(AppConfiguration.Social)).Get<Social>();
 
         var configuration = new AppConfiguration
         {
@@ -17,6 +20,7 @@ public static class AppConfigurationFactory
             Location = config[nameof(AppConfiguration.Location)],
             Phone = config[nameof(AppConfiguration.Phone)],
             AboutMe = aboutMe,
+            Social = social
         };
 
         return configuration;

@@ -19,4 +19,6 @@ public sealed record AppConfiguration
     public List<string> AboutMe { get; init; }
 
     public Social Social { get; init; }
+
+    public List<Skill> Skills { get; init; }
 }
